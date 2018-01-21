@@ -9,7 +9,7 @@ class Bottles
     end
   end
 
-  def get_take_string(n)
+  def get_action_string(n)
     if n > 1
       "Take one down and pass it around"
     elsif n == 1
@@ -31,10 +31,10 @@ class Bottles
     bottles_left = decrement_bottles(n)
     current_bottle_str = get_bottle_string(n)
     next_bottle_str = get_bottle_string(bottles_left)
-    take_str = get_take_string(n)
+    action_str = get_action_string(n)
 
     "#{current_bottle_str} of beer on the wall, #{current_bottle_str.downcase} of beer.\n" +
-      "#{take_str}, #{next_bottle_str.downcase} of beer on the wall.\n"
+      "#{action_str}, #{next_bottle_str.downcase} of beer on the wall.\n"
   end
 
   def verses(first, last)
